@@ -17,6 +17,7 @@ body {
 .banner {
   margin-top: 25px;
 }
+
 .banner > img {
   max-width: 300px;
 }
@@ -25,7 +26,6 @@ body {
   width: 120px;
   height: 120px;
   position: relative;
-
   -webkit-transform-style: preserve-3d;
   -webkit-transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -46,8 +46,6 @@ body {
   backface-visibility: hidden;
 }
 
-
-
 .flip {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
@@ -63,7 +61,6 @@ body {
   color: #101c2c;
   background-color: #05c3ff;
   font-size: 30px;
-  
 }
 
 #gameOver {
@@ -92,26 +89,36 @@ body {
 #gameBoard {
   max-width: 700px;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
   gap: 20px;
 }
 
 @media only screen and (max-width: 700px) {
-  .game-board {
+  #gameBoard {
     max-width: 400px;
-
-    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-    gap: 20px;
   }
+
   .card {
     width: 80px;
     height: 80px;
   }
+
   .icon {
     width: 40px;
   }
+
   .card_front,
   .card_back {
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #gameOver {
+    font-size: 30px;
+  }
+
+  #restart {
+    font-size: 15px;
   }
 }
