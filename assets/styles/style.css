@@ -76,7 +76,7 @@ body {
   flex-direction: column;
   top: 0;
   text-align: center;
-  margin-bottom: 6rem; 
+  margin-bottom: 6rem;
 }
 
 #restart {
@@ -87,7 +87,6 @@ body {
   border-radius: 10px;
   margin-top: 10px;
 }
-
 
 #gameBoard {
   max-width: 700px;
